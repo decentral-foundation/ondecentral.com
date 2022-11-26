@@ -178,13 +178,13 @@ pm2 serve public/ 80
 
 # Troubleshooting
 
-## If you are running OSX Ventura on Apple Silicon 
+## If you are running OSX Ventura on Apple Silicon
 
 Assumptions: you are using `yarn` and building locally
 
 And you are getting an issue with the npm package sharp
 
-The solution is contained here https://github.com/nuxt/image/issues/204
+The solution is contained [in this Github comment](https://github.com/nuxt/image/issues/204#issuecomment-1135639279)
 
 ## Other Builds
 
