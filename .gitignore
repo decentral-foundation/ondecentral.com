@@ -1,13 +1,4 @@
-# Project dependencies
-.cache
-node_modules
-yarn-error.log
-package-lock.json
-
-# Build directory
-/public
-.DS_Store
-.vscode/
-
-# Key value store
-.valkyrie
+node_modules/
+.cache/
+public
+src/gatsby-types.d.ts
