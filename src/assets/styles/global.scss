@@ -1,3 +1,5 @@
+// This stylesheet is imported in DefaultLayout.tsx
+
 @font-face {
   font-family: "Gilroy";
   src: url('../fonts/Gilroy-Thin.ttf') format('truetype');
@@ -122,4 +124,43 @@
   src: url('../fonts/Gilroy-HeavyItalic.ttf') format('truetype');
   font-weight: 900;
   font-style: italic;
+}
+
+:root {
+  --black: #000000;
+  --white: #FFFFFF;
+  --fk-granny-smith-apple: #B6FFB9;
+  --fk-electric-blue: #19EBF9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-size: 10px;
+  font-family: 'Gilroy', Inter, "Helvetica Neue", -apple-system, Arial, Helvetica, sans-serif;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  button {
+    cursor: pointer;
+  }
+}
+
+body {
+  transform: translateX(0%);
+  transition: transform ease-out 200ms;
+
+  &.navigation-active {
+    @media screen and (min-width: 700px) {
+      transform: translateX(0%);
+    }
+    transition: transform ease-in 200ms;
+    //overflow: hidden;
+    transform: translateX(-85%);
+  }
 }

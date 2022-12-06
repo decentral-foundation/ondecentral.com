@@ -1,0 +1,71 @@
+.navigationHeader {
+  $border-height: 8px;
+  background-color: var(--black);
+  padding: 2.5rem 2rem;
+  border-bottom: $border-height solid var(--fk-electric-blue);
+  position: relative;
+
+  &:after {
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: -#{$border-height * 2};
+    height: $border-height;
+    background-color: var(--fk-granny-smith-apple);
+    width: 100%;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .navigationMenu {
+    display: none;
+    align-items: center;
+    gap: 3rem;
+    list-style: none;
+
+    @media screen and (min-width: 700px) {
+      display: flex;
+    }
+
+    .menuItem {
+      font-size: 1.3rem;
+      color: white;
+      position: relative;
+      z-index: 1;
+      padding-bottom: 0.1rem;
+
+      &.active {
+        &:before {
+          content: '';
+          position: absolute;
+          margin: auto;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          height: 3px;
+          width: 60%;
+          z-index: -1;
+          border-radius: 10px;
+          background-color: var(--fk-granny-smith-apple);
+        }
+      }
+    }
+  }
+
+  .mobileMenuIcon {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media screen and (min-width: 700px) {
+      display: none;
+    }
+  }
+}
