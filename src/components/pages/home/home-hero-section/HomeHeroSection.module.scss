@@ -3,7 +3,7 @@
     max-width: var(--fk-container-width);
     margin: auto;
     display: grid;
-    padding: 3rem 3.5rem;
+    padding: 3rem 3.5rem 8rem;
     gap: 5rem;
 
     @media screen and (min-width: 750px) {
@@ -12,7 +12,11 @@
     }
 
     .columnOne {
-      padding-top: 5rem;
+      padding-top: 2rem;
+      @media screen and (min-width: 750px){
+        padding-top: 5rem;
+      }
+
       .headingContainer {
         max-width: max-content;
         margin-bottom: 2.5rem;
@@ -20,18 +24,25 @@
         .heading {
           font-size: 4rem;
           letter-spacing: 3px;
+
+          @media screen and (min-width: 750px){
+            font-size: 5rem;
+          }
         }
 
         .bsButton {
-          height: 50px;
+          height: 40px;
           margin-left: auto;
           margin-right: 3rem;
           display: block;
+          @media screen and (min-width: 750px){
+            height: 60px;
+          }
         }
       }
 
       .caption {
-        font-size: 1.4rem;
+        font-size: 1.6rem;
         line-height: 2.3rem;
         max-width: 480px;
       }

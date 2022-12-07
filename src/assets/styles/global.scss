@@ -129,6 +129,7 @@
 :root {
   --black: #000000;
   --white: #FFFFFF;
+  --fk-grey-tier-one: #FBFBFB;
   --fk-granny-smith-apple: #B6FFB9;
   --fk-electric-blue: #19EBF9;
   --fk-container-width: 1200px;
@@ -161,7 +162,7 @@ body {
       transform: translateX(0%);
     }
     transition: transform ease-in 200ms;
-    //overflow: hidden;
-    transform: translateX(-85%);
+    overflow: hidden;
+    transform: translateX(-80%);
   }
 }

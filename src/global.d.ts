@@ -8,3 +8,7 @@ declare module '*.svg' {
   export = content;
 }
 
+declare module '*.jpg' {
+  const content: any;
+  export = content;
+}
