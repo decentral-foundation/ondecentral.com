@@ -1,9 +1,10 @@
 .navigationHeader {
   $border-height: 8px;
   background-color: var(--black);
-  padding: 2.5rem 2rem;
+  padding: 2.5rem 3.5rem;
   border-bottom: $border-height solid var(--fk-electric-blue);
   position: relative;
+  margin-bottom: $border-height;
 
   &:after {
     position: absolute;
@@ -16,7 +17,7 @@
   }
 
   .container {
-    max-width: 1200px;
+    max-width: var(--fk-container-width);
     margin-inline: auto;
     display: flex;
     align-items: center;

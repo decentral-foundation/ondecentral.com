@@ -1,0 +1,15 @@
+.appButton {
+  background-color: var(--fk-electric-blue);
+  color: var(--black);
+  border: 2px solid var(--black);
+  font-size: 1.25rem;
+  padding: 0.8rem 1.8rem;
+  border-radius: 0.6rem;
+  font-weight: 600;
+
+  &.inverted {
+    background-color: var(--black);
+    color: var(--white);
+    border-color: var(--fk-electric-blue);
+  }
+}

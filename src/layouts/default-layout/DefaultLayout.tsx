@@ -1,7 +1,7 @@
 import React, {ReactNode} from "react";
 import '../../assets/styles/global.scss'
 
-type TDefaultLayoutProps = {
+export type TDefaultLayoutProps = {
   children: ReactNode
 }
 
