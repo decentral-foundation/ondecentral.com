@@ -4,6 +4,9 @@
   "private": true,
   "description": "Founders Kit Website",
   "author": "Emmanuel Adelakun",
+  "engines": {
+    "node": "18"
+  },
   "keywords": [
     "gatsby"
   ],
