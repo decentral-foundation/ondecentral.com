@@ -13,7 +13,6 @@ const config: GatsbyConfig = {
     "gatsby-transformer-remark",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
-    "gatsby-plugin-scss-typescript",
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
