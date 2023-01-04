@@ -12,6 +12,9 @@ import Contact from '../components/contact';
 import styled from 'styled-components';
 import { mixins, Main } from '../styles';
 
+
+
+
 const MainContainer = styled(Main)`
   ${mixins.sidePadding};
   counter-reset: section;
@@ -21,13 +24,13 @@ const IndexPage = ({ data, location }) => {
   return (
     <Layout location={location}>
       <MainContainer id="content">
-        <Hero data={data.hero.edges} />
-        <About data={data.about.edges} />
-        <Product data={data.product.edges} />
-        <Featured data={data.featured.edges} />
-        <Projects data={data.projects.edges} />
-        <Team data={data.team.edges} />
-        <Contact data={data.contact.edges} />
+          <Hero data={data.hero.edges} />
+          <About data={data.about.edges} />
+          <Product data={data.product.edges} />
+          <Featured data={data.featured.edges} />
+          <Projects data={data.projects.edges} />
+          <Team data={data.team.edges} />
+          <Contact data={data.contact.edges} />
       </MainContainer>
     </Layout>
   );

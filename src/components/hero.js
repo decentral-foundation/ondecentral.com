@@ -4,7 +4,37 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import { openPositions } from '../config';
 import styled from 'styled-components';
 import { theme, mixins, media, Section } from '../styles';
+import App from './App';
+import LanguageDetector from 'i18next-browser-languagedetector';
+import { initReactI18next } from 'react-i18next';
+import i18next from 'i18next';
+import HttpApi from 'i18next-http-backend';
+
+
 const { colors_option_b, fontSizes, fonts } = theme;
+
+
+
+
+i18next
+  .use(HttpApi)
+  .use(LanguageDetector)
+  .use(initReactI18next)
+  .init({
+    supportedLngs: ['en-GB', 'de-DE', 'ko-KR', 'zh-CN', 'zh-HK','zh-TW'],
+    fallbackLng: 'en-US',
+    debug: false,
+    // Options for language detector
+    detection: {
+      order: ['path', 'cookie', 'htmlTag'],
+      caches: ['cookie'],
+    },
+    // react: { useSuspense: false },
+    backend: {
+      loadPath: '/assets/locales/{{lng}}/index.md',
+    },
+  })
+
 
 const HeroContainer = styled(Section)`
   ${mixins.flexCenter};
@@ -74,6 +104,8 @@ class Hero extends Component {
     this.setState({ isMounted: false });
   }
 
+
+  
   render() {
     const { data } = this.props;
     const { isMounted } = this.state;
@@ -105,6 +137,9 @@ class Hero extends Component {
               </CSSTransition>
             ))}
         </TransitionGroup>
+        <br/>
+        <App/>
+
       </HeroContainer>
     );
   }
