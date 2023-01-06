@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import { srConfig } from '../config';
-import { IconGithub, IconExternal, IconFolder } from './icons';
+import { IconGithub, IconExternal, IconFolder, IconLocation } from './icons';
 import styled from 'styled-components';
 import { theme, mixins, media, Section, Button } from '../styles';
 const { colors_option_b, fontSizes, fonts } = theme;
@@ -121,6 +121,7 @@ class Projects extends Component {
 
   state = {
     showMore: false,
+    modalIsOpen: false,
   };
 
   componentDidMount() {
@@ -132,6 +133,8 @@ class Projects extends Component {
 
   showMoreToggle = () => this.setState({ showMore: !this.state.showMore });
 
+  openModal = () => this.setState({ modalIsOpen: !this.modalIsOpen });
+
   render() {
     const GRID_LIMIT = 6;
     const { showMore } = this.state;
@@ -139,6 +142,7 @@ class Projects extends Component {
     const projects = data.filter(({ node }) => node.frontmatter.show === 'true');
     const firstSix = projects.slice(0, GRID_LIMIT);
     const projectsToShow = showMore ? projects : firstSix;
+    // console.log('projectsToShow: ', projectsToShow);
 
     return (
       <ProjectsContainer id={'publications'}>
@@ -149,6 +153,16 @@ class Projects extends Component {
               projectsToShow.map(({ node }, i) => {
                 const { frontmatter, html } = node;
                 const { github, external, title, tech } = frontmatter;
+                {
+                  /*console.log('title: ', title);*/
+                }
+                // location means endpoint that is of URL syntax
+                const location = title.split(' ').join('-');
+                {
+                  /*console.log('location: ', location);*/
+                }
+                // replace all space strings
+
                 return (
                   <CSSTransition
                     key={i}
@@ -185,6 +199,15 @@ class Projects extends Component {
                                   rel="nofollow noopener noreferrer"
                                   aria-label="External Link">
                                   <IconExternal />
+                                </IconLink>
+                              )}
+                              {external && (
+                                <IconLink
+                                  href={location}
+                                  target="_blank"
+                                  rel="nofollow noopener noreferrer"
+                                  aria-label="Modal Link">
+                                  <IconLocation />
                                 </IconLink>
                               )}
                             </Links>
