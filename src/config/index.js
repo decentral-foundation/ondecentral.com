@@ -8,6 +8,8 @@ module.exports = {
   location: 'San Francisco, CA',
   email: 'contact@ondecentral.com',
   openPositions: 'https://angel.co/company/decentralinc/jobs',
+ 
+
   socialMedia: [
     {
       name: 'Github',
