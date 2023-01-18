@@ -57,13 +57,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
-        trackingIds: ['G-HFZ8KMRXTW'],
+        trackingIds: ['G-9HMJ423VGZ'],
         gtagConfig: {
           anonymize_ip: true,
           cookie_expires: 0,
         },
         pluginConfig: {
-          head: false,
+          head: true,
           respectDNT: true, // Respect Do Not Track
           delayOnRouteUpdate: 0,
         },
