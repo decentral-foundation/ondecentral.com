@@ -142,7 +142,6 @@ class Projects extends Component {
     const projects = data.filter(({ node }) => node.frontmatter.show === 'true');
     const firstSix = projects.slice(0, GRID_LIMIT);
     const projectsToShow = showMore ? projects : firstSix;
-    // console.log('projectsToShow: ', projectsToShow);
 
     return (
       <ProjectsContainer id={'publications'}>
@@ -153,14 +152,9 @@ class Projects extends Component {
               projectsToShow.map(({ node }, i) => {
                 const { frontmatter, html } = node;
                 const { github, external, title, tech } = frontmatter;
-                {
-                  /*console.log('title: ', title);*/
-                }
                 // location means endpoint that is of URL syntax
                 const location = title.split(' ').join('-');
-                {
-                  /*console.log('location: ', location);*/
-                }
+
                 // replace all space strings
 
                 return (
