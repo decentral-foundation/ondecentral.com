@@ -174,7 +174,7 @@ class Product extends Component {
 
     return (
       <ProductContainer id="product" ref={el => (this.product = el)}>
-        <Heading>See what's possible with Lucia Protocol</Heading>
+        <Heading>Frequently Asked Questions</Heading>
         <TabsContainer>
           <Tabs role="tablist">
             {data &&

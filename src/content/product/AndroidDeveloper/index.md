@@ -9,10 +9,8 @@ url: 'Data Collected?'
 
 #### Fundraising Objectives
 
-- Knowledge of Linux/UNIX systems and shell scripting.
-- Git and in general with version control.
-- A broad knowledge of algorithms, programming languages, and libraries.
-- Experience with cryptographic natives such as elliptic curve cryptography implementations to blockchain node environments.
+- What amount of capital do you aim to raise?
+- How do you intend to utilize the funds?
 
 #### Legal Information
 
