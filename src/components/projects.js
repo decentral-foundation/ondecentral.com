@@ -210,7 +210,7 @@ class Projects extends Component {
     } else if (hash === '#rspa-feature') {
       postIndex = 0; //find index
     } else if (hash === '#publications') {
-      window.scroll(50, 5800);
+      window.scroll(50,5800); 
     }
 
     // if not found can either do nothing or set the location hash back to empty string
@@ -222,7 +222,6 @@ class Projects extends Component {
 
     import('scrollreveal').then(({ default: ScrollReveal }) => {
       ScrollReveal().reveal(this.projects, srConfig());
-      // this.revealRefs.forEach((ref, i) => ScrollReveal().reveal(ref, srConfig(i * 10)));
     });
   }
 
