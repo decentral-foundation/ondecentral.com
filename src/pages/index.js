@@ -61,6 +61,10 @@ export const query = graphql`
             name
             subtitle
             contactText
+            img
+            contentTitle
+            contentText1
+            contentText2
           }
           html
         }

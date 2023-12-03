@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
-import { webApp } from '../config';
+// import { webApp } from '../config';
 import styled from 'styled-components';
 import { theme, mixins, media, Section } from '../styles';
 const { colors_option_b, fontSizes, fonts } = theme;
@@ -43,6 +43,10 @@ const Subtitle = styled.h3`
   ${media.phablet`font-size: 50px;`};
   ${media.phone`font-size: 40px;`};
 `;
+const ContactText = styled.div`
+  font-size: 20px;
+  color: ${colors_option_b.white};
+`;
 const Blurb = styled.div`
   margin-top: 25px;
   width: 50%;
@@ -51,12 +55,24 @@ const Blurb = styled.div`
     ${mixins.inlineLink};
   }
 `;
-const EmailLink = styled.a`
-  ${mixins.bigButton};
-  font-size: ${fontSizes.smallish};
-  margin-top: 50px;
-`;
 
+const ContentContainer = styled.div`
+  display: flex;
+  align-items: center;
+  padding-block: 40px;
+`;
+const Content = styled.div`
+  h1 {
+    font-size: 36px;
+    margin-block: 0px;
+  }
+  h2 {
+    font-size: 36px;
+    font-weight: 300;
+    margin-block: 0px;
+  }
+`;
+const ImageContainer = styled.div``;
 class Hero extends Component {
   static propTypes = {
     data: PropTypes.array.isRequired,
@@ -85,14 +101,21 @@ class Hero extends Component {
       <Subtitle style={{ transitionDelay: '150ms' }}>{frontmatter.subtitle}</Subtitle>
     );
     const four = () => (
-      <Blurb style={{ transitionDelay: '200ms' }} dangerouslySetInnerHTML={{ __html: html }} />
+      <ContactText style={{ transitionDelay: '150ms' }}>{frontmatter.contactText}</ContactText>
     );
     const five = () => (
-      <div style={{ transitionDelay: '2500ms' }}>
-        <EmailLink href={`${webApp}`}>Launch The App</EmailLink>
-      </div>
+      <ContentContainer style={{ transitionDelay: '200ms' }}>
+        <Content>
+          <h1>{frontmatter.contentTitle}</h1>
+          <h2>{frontmatter.contentText1}</h2>
+          <h2>{frontmatter.contentText2}</h2>
+          <Blurb dangerouslySetInnerHTML={{ __html: html }} />
+        </Content>
+        <ImageContainer>
+          <img src={frontmatter.img} alt="hero" />
+        </ImageContainer>
+      </ContentContainer>
     );
-
     const items = [one, two, three, four, five];
 
     return (
