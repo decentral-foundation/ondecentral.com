@@ -222,7 +222,6 @@ class Projects extends Component {
 
     import('scrollreveal').then(({ default: ScrollReveal }) => {
       ScrollReveal().reveal(this.projects, srConfig());
-//    this.revealRefs.forEach((ref, i) => ScrollReveal().reveal(ref, srConfig(i * 100)));
     });
   }
 

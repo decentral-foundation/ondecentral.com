@@ -5,7 +5,6 @@ import Layout from '../components/layout';
 import Hero from '../components/hero';
 import About from '../components/about';
 import Product from '../components/product';
-import Featured from '../components/featured';
 import Projects from '../components/projects';
 import Team from '../components/team';
 import Contact from '../components/contact';
@@ -18,13 +17,25 @@ const MainContainer = styled(Main)`
 `;
 
 const IndexPage = ({ data, location }) => {
+  // try {
+  //   fetch('https://api.founderskit.org' + '/mixpanel', {
+  //     //fetch('http://localhost:3000' + '/mixpanel', {
+  //     method: 'POST',
+  //     headers: {
+  //       'Content-Type': 'application/x-www-form-urlencoded',
+  //     },
+  //     body: new URLSearchParams(info),
+  //   });
+  // } catch (err) {
+  //   //console.log(err);
+  // }
+
   return (
     <Layout location={location}>
       <MainContainer id="content">
         <Hero data={data.hero.edges} />
         <About data={data.about.edges} />
         <Product data={data.product.edges} />
-        <Featured data={data.featured.edges} />
         <Projects data={data.projects.edges} location={location} />
         <Team data={data.team.edges} />
         <Contact data={data.contact.edges} />
@@ -90,30 +101,6 @@ export const query = graphql`
         }
       }
     }
-    featured: allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/featured/" } }
-      sort: { fields: [frontmatter___date], order: DESC }
-    ) {
-      edges {
-        node {
-          frontmatter {
-            title
-            cover {
-              childImageSharp {
-                fluid(maxWidth: 700, quality: 90, traceSVG: { color: "#64ffda" }) {
-                  ...GatsbyImageSharpFluid_withWebp_tracedSVG
-                }
-              }
-            }
-            tech
-            github
-            external
-            show
-          }
-          html
-        }
-      }
-    }
     projects: allMarkdownRemark(
       filter: { fileAbsolutePath: { regex: "/projects/" } }
       sort: { fields: [frontmatter___date], order: DESC }
@@ -157,6 +144,20 @@ export const query = graphql`
         node {
           frontmatter {
             title
+          }
+          html
+        }
+      }
+    }
+    userform: allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/userform/" } }) {
+      edges {
+        node {
+          frontmatter {
+            firstname
+            lastname
+            company
+            email
+            industry
           }
           html
         }

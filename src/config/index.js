@@ -1,12 +1,13 @@
 module.exports = {
-  siteTitle: 'Founders Kit - Blockchain contract management platform',
-  siteDescription: '& the number one way to hire an engineer',
-  siteKeywords: 'substrate, polkadot, nodejs, rust',
+  siteTitle:
+    'Lucia Protocol - Infrastructure for Lending and Borrowing | Privacy Focused Web3 Access  |  Built on Polygon ',
+  siteDescription: 'ZK-Proofs Implementation | Decentralized DeFi Platform',
+  siteKeywords: 'zkevm, blockchain, lending, defi, loans, nodejs, rust, venture capital, vc',
   siteUrl: 'https://ondecentral.com',
   siteLanguage: 'en_US',
-  name: 'Ling Qing Meng',
+  name: 'Decentral',
   location: 'San Francisco, CA',
-  email: 'contact@ondecentral.com',
+  email: 'info@ondecentral.com',
   openPositions: 'https://angel.co/company/decentralinc/jobs',
   webApp: 'https://portal.founderskit.org',
   socialMedia: [
@@ -24,7 +25,7 @@ module.exports = {
     },
     {
       name: 'Twitter',
-      url: 'https://twitter.com/lingqingm',
+      url: 'https://twitter.com/founders_kit',
     },
   ],
 
@@ -38,10 +39,6 @@ module.exports = {
       url: '#product',
     },
     {
-      name: 'Case Studies',
-      url: '#projects',
-    },
-    {
       name: 'Team',
       url: '#team',
     },
@@ -51,7 +48,7 @@ module.exports = {
     },
   ],
 
-  twitterHandle: '@lingqingm',
+  twitterHandle: '@founders_kit',
   googleAnalyticsID: 'G-9HMJ423VGZ',
 
   googleVerification: '6sWFAYxVRjcZIj568rtimRaEsmce8cDIRSk3YLutZxI',
