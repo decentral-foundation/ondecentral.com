@@ -155,7 +155,7 @@ class Contact extends Component {
                     <a href="https://luciaprotocol.com">solutions</a>
                   </li>
                   <li>
-                    <a href="https://luciaprotocol.com">developer docs</a>
+                    <a href="https://docs.luciaprotocol.com">developer docs</a>
                   </li>
                 </ul>
               </div>
@@ -170,7 +170,7 @@ class Contact extends Component {
                     <a href="https://luciaprotocol.com">careers</a>
                   </li>
                   <li>
-                    <a href="https://luciaprotocol.com">news</a>
+                    <a href="https://lucia-protocol.gitbook.io/lucia-protocol/">whitepaper</a>
                   </li>
                   <li>
                     <a href="https://luciaprotocol.com">brand kit</a>
@@ -200,10 +200,10 @@ class Contact extends Component {
                 <h4>Socials</h4>
                 <ul>
                   <li>
-                    <a href="https://luciaprotocol.com">discord</a>
+                    <a href="https://discord.gg/tcfZ9B7VNH">discord</a>
                   </li>
                   <li>
-                    <a href="https://luciaprotocol.com">telegram</a>
+                    <a href="https://t.me/+RJ_CvBSlfSRkZGE5">telegram</a>
                   </li>
                 </ul>
               </div>
@@ -212,7 +212,9 @@ class Contact extends Component {
                 <h4>misc</h4>
                 <ul>
                   <li>
-                    <a href="https://luciaprotocol.com">privacy</a>
+                    <a href="https://forum.founderskit.org/t/privacy-policy-for-founders-kit-app/22">
+                      privacy
+                    </a>
                   </li>
                   <li>
                     <a href="https://luciaprotocol.com">contributor terms of service</a>
