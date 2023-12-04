@@ -13,7 +13,7 @@ module.exports = {
   socialMedia: [
     {
       name: 'Github',
-      url: 'https://github.com/decentral-foundation/',
+      url: 'https://github.com/ondecentral/',
     },
     {
       name: 'Linkedin',
@@ -25,7 +25,7 @@ module.exports = {
     },
     {
       name: 'Twitter',
-      url: 'https://twitter.com/founders_kit',
+      url: 'https://twitter.com/luciaprotocol',
     },
   ],
 

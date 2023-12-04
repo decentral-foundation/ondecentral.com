@@ -10,7 +10,7 @@ Access up to \$60 million in liquidity in a turn-key protocol
 - Business Loans
 - Consumer loans
 
-![](./auto_kyc.png)
+![](./dashboard.png)
 
 Get immediate matches with optimal loan selections from over 100 lenders and streamline your fundraising process with Lucia Protocol.
 

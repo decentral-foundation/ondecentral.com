@@ -47,10 +47,10 @@ const Skill = styled.li`
 `;
 const PicContainer = styled.div`
   position: relative;
-  width: 40%;
-  max-width: 300px;
+  width: 80%;
+  max-width: 1000px;
   margin-left: 60px;
-  ${media.tablet`margin: 60px auto 0;`};
+  ${media.tablet`margin: 20px auto 0;`};
   ${media.phablet`width: 70%;`};
 `;
 const Avatar = styled(Img)`
@@ -144,9 +144,10 @@ class About extends Component {
         </FlexContainer>
         <FlexContainer>
           <div>
-            Do you feel overwhelmed with the lack of cash when launching a startup? Are you fed up
-            being stuck in your startup not getting the revenue numbers you need to close your next
-            round? This is the holy grail of finding product market fit: A must read for any startup
+            This credit availability is intended not just for short-term needs but also for
+            operational sustainability and long-term growth. Business leaders now must prioritize
+            data protection, automation, and data driven decision making over old fashioned and
+            outdated methodologies.
           </div>
         </FlexContainer>
         <div style={{ transitionDelay: '2500ms' }}>

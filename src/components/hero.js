@@ -9,7 +9,7 @@ const { colors_option_b, fontSizes, fonts } = theme;
 const HeroContainer = styled(Section)`
   ${mixins.flexCenter};
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   min-height: 100vh;
   ${media.tablet`padding-top: 150px;`};
   div {
@@ -45,8 +45,8 @@ const Subtitle = styled.h3`
 `;
 const Blurb = styled.div`
   margin-top: 25px;
-  width: 50%;
-  max-width: 500px;
+  width: 70%;
+  max-width: 800px;
   a {
     ${mixins.inlineLink};
   }

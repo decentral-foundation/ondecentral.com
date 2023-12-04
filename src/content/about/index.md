@@ -1,6 +1,6 @@
 ---
 title: 'What we are building'
-avatar: './main.jpeg'
+avatar: './auto_kyc.png'
 integrations:
   - Rust
   - Solidity
@@ -17,6 +17,3 @@ integrations:
 ### Capital efficient loans for the consumer of tomorrow
 
 Lucia Protocol is a non-custodial lending and borrowing platform aimed at providing frictionless credit access to both individuals and startup enterprises. Lucia’s AI-powered credit evaluation process revolutionizes the financial sector by taking into account a wide range of on-chain and off-chain metrics.
-
-This credit availability is intended not just for short-term needs but also for operational sustainability and long-term growth
-Business leaders now must prioritize data protection, automation, and data driven decision making over old fashioned and outdated methodologies.
