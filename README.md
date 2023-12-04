@@ -176,9 +176,16 @@ yarn add pm2
 pm2 serve public/ 80
 ```
 
+# Deploying Manually
+
+1. Check with admin on Domain and AWS Route 53 configuration
+2. You'll need to run `yarn build`
+3. Upload contents to the s3 bucket
+4. Invalidate Cache on Cloudfront on paths `/*`
+
 # Troubleshooting
 
-## If you are running OSX Ventura on Apple Silicon 
+## If you are running OSX Ventura on Apple Silicon
 
 Assumptions: you are using `yarn` and building locally
 
