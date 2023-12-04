@@ -35,7 +35,7 @@ module.exports = {
       url: '#about',
     },
     {
-      name: 'Careers',
+      name: 'FAQs',
       url: '#product',
     },
     {

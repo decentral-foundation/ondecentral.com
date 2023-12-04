@@ -1,7 +1,7 @@
 ---
 date: '2022-02-01'
-title: 'Q1:'
-company: 'What information is required to initiate the process?'
+title: 'What information is required to initiate the process?'
+company: ''
 location: 'Santa Clara, CA'
 range: "Answer: To begin, we simply require some fundamental details about your company to customize the funding options according to your requirements. Here's the information we'll request:"
 url: 'Data Collected?'

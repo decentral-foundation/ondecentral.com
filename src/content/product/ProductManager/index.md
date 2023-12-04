@@ -1,7 +1,7 @@
 ---
 date: '2022-02-01'
-title: 'Q4:'
-company: 'Is finance knowledge a prerequisite for onboarding?'
+title: 'Is finance knowledge a prerequisite for onboarding?'
+company: ''
 location: 'New York, NY'
 range: 'Lucia Protocol is public and inclusive, regardless of your level of financial expertise. Our array of resources and committed support team ensures that you can easily understand your funding alternatives and lender connections, even if finance is new to you.'
 url: 'Prerequisites?'
