@@ -175,6 +175,27 @@ class Product extends Component {
     return (
       <ProductContainer id="product" ref={el => (this.product = el)}>
         <Heading>Frequently Asked Questions</Heading>
+        <p>How does Lucia's Attribution product work</p>
+        <div>Watch the video below now to see a demo</div>
+        <iframe
+          width="768"
+          height="576"
+          src="https://www.youtube.com/embed/EjAL8xNaGXQ?si=3F-Ng6PSero0mbi0"
+          title="YouTube video player"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+        <div>Lucia Attribution Product is a B2B tool for tech businesses</div>
+        <div>
+          Read{' '}
+          <b>
+            <a href="https://vivid-lightning-e40.notion.site/Difference-between-Lucia-Attribution-and-Lucia-s-Lending-and-Borrowing-Protocol-2e4fc38cb2e548eab91a8fe07180e3ed?pvs=4">
+              this article
+            </a>
+          </b>{' '}
+          to understand what the difference is between our attribution product and our borrowing and
+          lending protocol
+        </div>
         <TabsContainer>
           <Tabs role="tablist">
             {data &&
