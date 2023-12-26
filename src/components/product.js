@@ -196,6 +196,7 @@ class Product extends Component {
           to understand what the difference is between our attribution product and our borrowing and
           lending protocol
         </div>
+
         <TabsContainer>
           <Tabs role="tablist">
             {data &&
