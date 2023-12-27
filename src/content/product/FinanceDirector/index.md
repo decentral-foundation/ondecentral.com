@@ -1,8 +1,8 @@
 ---
 date: '2022-02-01'
-title: 'By setting up an account, am I entering into any commitments or obligations?'
+title: "What happens if someone borrows from the protocol doesn't pay the protocol back?"
 company: ''
 location: 'Santa Clara, CA'
-range: "Absolutely no commitments! Registering with us carries no obligations. Consider it akin to window shopping for your business's financial prospects. Many companies start by exploring options, and when you're ready, you can proceed with fundraising. You have control, and we're here to assist, guiding you through the intricate landscape of debt financing at your preferred pace."
-url: 'Commitment requirements?'
+range: 'This question is for our B2C borrowing and lending product. We enter a legal relationship with our users. Our protocol requires KYC, thus users are eventually obligated to pay loan back in full. When a user agrees on a loan term they sign with their web3 wallet. By them doing that they are legally binding their acceptance to the loan terms and conditions.'
+url: 'Legal relationship?'
 ---
