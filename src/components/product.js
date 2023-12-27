@@ -7,6 +7,21 @@ const { colors_option_b, fontSizes, fonts } = theme;
 
 const ProductContainer = styled(Section)`
   position: relative;
+
+  .video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* Aspect ratio (16:9) for responsive scaling */
+    overflow: hidden;
+  }
+
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 `;
 const TabsContainer = styled.div`
   display: flex;
@@ -176,14 +191,16 @@ class Product extends Component {
         <Heading>Frequently Asked Questions</Heading>
         <h3>How does Lucia's Attribution product work?</h3>
         <div>Watch the video below now to see a demo</div>
-        <iframe
-          width="1024"
-          height="768"
-          src="https://www.youtube.com/embed/EjAL8xNaGXQ?si=3F-Ng6PSero0mbi0"
-          title="YouTube video player"
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen></iframe>
+        <div className="video-container">
+          <iframe
+            width="1024"
+            height="768"
+            src="https://www.youtube.com/embed/EjAL8xNaGXQ?si=3F-Ng6PSero0mbi0"
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+        </div>
 
         <h3>What's the difference between Lucia Attribution and Lucia Protocol?</h3>
         <div>Lucia Attribution Product is a B2B tool for tech businesses</div>
