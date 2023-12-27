@@ -22,6 +22,12 @@ const ProductContainer = styled(Section)`
     width: 100%;
     height: 100%;
   }
+
+  .callToAction {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 const TabsContainer = styled.div`
   display: flex;
@@ -164,6 +170,7 @@ const JobDetails = styled.h5`
 `;
 
 const EmailLink = styled.a`
+  padding-top: 300px;
   ${mixins.bigButton};
   font-size: ${fontSizes.smallish};
   margin-top: 50px;
@@ -265,8 +272,14 @@ class Product extends Component {
         </TabsContainer>
         <br />
         <br />
-        <h3>Want to ask anything specific or want to register?</h3>
-        <EmailLink href={`https://calendly.com/lingqingmeng`}>Book a Call</EmailLink>
+        <div className="callToAction">
+          <strong>Want to ask anything specific or want to register?</strong>
+          <br />
+          <br />
+        </div>
+        <div className="callToAction">
+          <EmailLink href={`https://calendly.com/lingqingmeng`}>Book a Call</EmailLink>
+        </div>
         <br />
         <br />
         <br />
