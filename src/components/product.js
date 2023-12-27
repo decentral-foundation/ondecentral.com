@@ -7,7 +7,27 @@ const { colors_option_b, fontSizes, fonts } = theme;
 
 const ProductContainer = styled(Section)`
   position: relative;
-  max-width: 700px;
+
+  .video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* Aspect ratio (16:9) for responsive scaling */
+    overflow: hidden;
+  }
+
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .callToAction {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 const TabsContainer = styled.div`
   display: flex;
@@ -149,6 +169,13 @@ const JobDetails = styled.h5`
   }
 `;
 
+const EmailLink = styled.a`
+  padding-top: 300px;
+  ${mixins.bigButton};
+  font-size: ${fontSizes.smallish};
+  margin-top: 50px;
+`;
+
 class Product extends Component {
   static propTypes = {
     data: PropTypes.array.isRequired,
@@ -175,6 +202,21 @@ class Product extends Component {
     return (
       <ProductContainer id="product" ref={el => (this.product = el)}>
         <Heading>Frequently Asked Questions</Heading>
+        <h3>How does Lucia's Attribution product work?</h3>
+        <div>Watch the video below now to see a demo</div>
+        <div className="video-container">
+          <iframe
+            width="1024"
+            height="768"
+            src="https://www.youtube.com/embed/EjAL8xNaGXQ?si=3F-Ng6PSero0mbi0"
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+        </div>
+        <br />
+        <br />
+        <h2> Additional Questions </h2>
         <TabsContainer>
           <Tabs role="tablist">
             {data &&
@@ -228,6 +270,56 @@ class Product extends Component {
               })}
           </ContentContainer>
         </TabsContainer>
+        <br />
+        <br />
+        <div className="callToAction">
+          <strong>Want to ask anything specific or want to register?</strong>
+          <br />
+          <br />
+        </div>
+        <div className="callToAction">
+          <EmailLink href={`https://calendly.com/lingqingmeng`}>Book a Call</EmailLink>
+        </div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <hr />
+        <h2> Full FAQ below</h2>
+        <h3>What's the difference between Lucia Attribution and Lucia Protocol?</h3>
+        <div>Lucia Attribution Product is a B2B tool for tech businesses</div>
+        <div>
+          Read{' '}
+          <b>
+            <a href="https://vivid-lightning-e40.notion.site/Difference-between-Lucia-Attribution-and-Lucia-s-Lending-and-Borrowing-Protocol-2e4fc38cb2e548eab91a8fe07180e3ed?pvs=4">
+              this article
+            </a>
+          </b>{' '}
+          to understand what the difference is between our attribution product and our borrowing and
+          lending protocol
+        </div>
+
+        <h3>How affordable is your attribution product?</h3>
+        <div>
+          {' '}
+          Pricing is based on total numbers of end users attributed. But if you are a business
+          owner, you should consider the cost of not doing this. Lets say you have a working product
+          with paying customers. By purchasing this product you immediately get more revenue into
+          your business, and you lower cost of user acquisition. This opens up your company to
+          additional marketing efforts because now you are sure you'll have a positive ROI from
+          ads/nonpaid organic content.{' '}
+        </div>
+        <h3>Why do I need this when I can get other marketing tools? </h3>
+        <div>
+          Reddit uses Branch. Tony Robins uses Hyros. Tons of companies use an attribution product,
+          and we are the best suited for Blockchain companies{' '}
+        </div>
+
+        <h3>What happens if someone borrows from the protocol doesn't pay the protocol back</h3>
+        <div>
+          This question is for our B2C product. We enter a legal relationship with our users. Our
+          protocol requires KYC so users are eventually obligated to pay loan back in full
+        </div>
       </ProductContainer>
     );
   }

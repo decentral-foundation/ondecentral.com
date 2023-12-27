@@ -53,6 +53,7 @@
     "gatsby-transformer-remark": "^2.2.5",
     "gatsby-transformer-sharp": "^2.1.13",
     "http-server": "^14.1.0",
+    "js-cookie": "^3.0.5",
     "prop-types": "^15.7.2",
     "react": "^16.8.2",
     "react-anchor-link-smooth-scroll": "^1.0.11",
