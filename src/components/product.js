@@ -7,7 +7,6 @@ const { colors_option_b, fontSizes, fonts } = theme;
 
 const ProductContainer = styled(Section)`
   position: relative;
-  max-width: 700px;
 `;
 const TabsContainer = styled.div`
   display: flex;
@@ -175,16 +174,18 @@ class Product extends Component {
     return (
       <ProductContainer id="product" ref={el => (this.product = el)}>
         <Heading>Frequently Asked Questions</Heading>
-        <p>How does Lucia's Attribution product work</p>
+        <h3>How does Lucia's Attribution product work?</h3>
         <div>Watch the video below now to see a demo</div>
         <iframe
-          width="768"
-          height="576"
+          width="1024"
+          height="768"
           src="https://www.youtube.com/embed/EjAL8xNaGXQ?si=3F-Ng6PSero0mbi0"
           title="YouTube video player"
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowfullscreen></iframe>
+
+        <h3>What's the difference between Lucia Attribution and Lucia Protocol?</h3>
         <div>Lucia Attribution Product is a B2B tool for tech businesses</div>
         <div>
           Read{' '}
@@ -196,6 +197,29 @@ class Product extends Component {
           to understand what the difference is between our attribution product and our borrowing and
           lending protocol
         </div>
+
+        <h3>How affordable is your attribution product?</h3>
+        <div>
+          {' '}
+          Pricing is based on total numbers of end users attributed. But if you are a business
+          owner, you should consider the cost of not doing this. Lets say you have a working product
+          with paying customers. By purchasing this product you immediately get more revenue into
+          your business, and you lower cost of user acquisition. This opens up your company to
+          additional marketing efforts because now you are sure you'll have a positive ROI from
+          ads/nonpaid organic content.{' '}
+        </div>
+        <h3>Why do I need this when I can get other marketing tools? </h3>
+        <div>
+          Reddit uses Branch. Tony Robins uses Hyros. Tons of companies use an attribution product,
+          and we are the best suited for Blockchain companies{' '}
+        </div>
+
+        <h3>What happens if someone borrows from the protocol doesn't pay the protocol back</h3>
+        <div>
+          This question is for our B2C product. We enter a legal relationship with our users. Our
+          protocol requires KYC so users are eventually obligated to pay loan back in full
+        </div>
+        <h2> Misc. Questions </h2>
 
         <TabsContainer>
           <Tabs role="tablist">

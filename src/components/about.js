@@ -1,3 +1,4 @@
+// This is section 1
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Img from 'gatsby-image';
