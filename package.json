@@ -12,12 +12,12 @@
     "finance"
   ],
   "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "format": "prettier --write 'src/**/*.js'",
-    "start": "gatsby develop",
-    "clean": "gatsby clean",
-    "deploy": "gatsby-plugin-s3 deploy --yes"
+    "build": "npm install -g gatsby-cli & gatsby build",
+    "develop": "npm install -g gatsby-cli & gatsby develop",
+    "format": "npm install -g gatsby-cli & prettier --write 'src/**/*.js'",
+    "start": "npm install -g gatsby-cli & gatsby develop",
+    "clean": "npm install -g gatsby-cli & gatsby clean",
+    "deploy": "npm install -g gatsby-cli & gatsby-plugin-s3 deploy --yes"
   },
   "husky": {
     "hooks": {
