@@ -9,6 +9,7 @@ import Projects from '../components/projects';
 import Team from '../components/team';
 import Contact from '../components/contact';
 import styled from 'styled-components';
+import { InlineWidget } from 'react-calendly';
 import { mixins, Main } from '../styles';
 
 const MainContainer = styled(Main)`
@@ -38,6 +39,15 @@ const IndexPage = ({ data, location }) => {
         <Product data={data.product.edges} />
         <Projects data={data.projects.edges} location={location} />
         <Team data={data.team.edges} />
+        <InlineWidget
+          url="https://calendly.com/lingqingmeng/30min"
+          styles={{
+            height: '850px',
+          }}
+          text="Click here to schedule!"
+          textColor="#ffffff"
+          color="#00a2ff"
+        />
         <Contact data={data.contact.edges} />
       </MainContainer>
     </Layout>
