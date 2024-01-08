@@ -73,7 +73,6 @@ class UserForm extends Component {
     const { data } = this.props;
     const { frontmatter } = data[0].node;
     const { title } = frontmatter;
-    // const { title, firstname, lastname, email, company, industry } = frontmatter;
 
     const info = {
       title: 'User visited free marketing page',
@@ -147,18 +146,6 @@ class UserForm extends Component {
       // 'position':'absolute',
       // 'margin-top':'0'
     };
-    try {
-      fetch('https://api.founderskit.org' + '/mixpanel', {
-        //fetch('http://localhost:3000' + '/mixpanel', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded',
-        },
-        body: new URLSearchParams(info),
-      });
-    } catch (err) {
-      //console.log(err);
-    }
 
     return (
       <div style={userbody}>
@@ -255,12 +242,12 @@ class UserForm extends Component {
 
             <div style={Learnaboutcont}>
               <h1>Learn About</h1>
-              <h5 style={learnabout_subheads}># How to calculate options</h5>
+              <h5 style={learnabout_subheads}>How to calculate options</h5>
               <h5 style={learnabout_subheads}>
-                # How to find product market fit with the lowest possible budget
+                How to find product market fit with the lowest possible budget
               </h5>
               <h5 style={learnabout_subheads}>
-                # How these methods have been used by industry incumbents and have been hid from the
+                How these methods have been used by industry incumbents and have been hid from the
                 general public
               </h5>
             </div>

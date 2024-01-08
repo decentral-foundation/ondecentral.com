@@ -251,6 +251,7 @@ class Header extends Component {
     const { pathname } = location;
     const isResource = pathname === '/MarketingUserForm'; // should use a better design pattern
     const isBlogs = pathname === '/BlogsPage';
+    const isSubmission = pathname === '/growthCallClean';
     const isHome = location && location.pathname === '/';
 
     return (
@@ -303,7 +304,7 @@ class Header extends Component {
             <TransitionGroup>
               {isMounted && isResource && (
                 <CSSTransition classNames="fadedown" timeout={3000}>
-                  <div style={{ transitionDelay: `600ms` }}>
+                  <div style={{ transitionDelay: `300ms` }}>
                     <ResumeLink href={'/'} rel="nofollow noopener noreferrer">
                       Main Page
                     </ResumeLink>
@@ -312,9 +313,21 @@ class Header extends Component {
               )}
             </TransitionGroup>
             <TransitionGroup>
+              {isMounted && isSubmission && (
+                <CSSTransition classNames="fadedown" timeout={3000}>
+                  <div style={{ transitionDelay: `300ms` }}>
+                    <ResumeLink href={'/'} rel="nofollow noopener noreferrer">
+                      Main Page
+                    </ResumeLink>
+                  </div>
+                </CSSTransition>
+              )}
+            </TransitionGroup>
+
+            <TransitionGroup>
               {isBlogs && (
                 <CSSTransition classNames="fadedown" timeout={3000}>
-                  <div style={{ transitionDelay: `600ms` }}>
+                  <div style={{ transitionDelay: `300ms` }}>
                     <ResumeLink href={'/'} rel="nofollow noopener noreferrer">
                       Main Page
                     </ResumeLink>
