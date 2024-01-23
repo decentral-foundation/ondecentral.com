@@ -11,6 +11,7 @@ import { IconLogo } from './icons';
 import styled from 'styled-components';
 import { theme, mixins, media, Nav } from '../styles';
 const { colors_option_b, fontSizes, fonts } = theme;
+import lucia from '../utils/lucia';
 
 const HeaderContainer = styled.header`
   ${mixins.flexBetween};
@@ -239,7 +240,7 @@ class Header extends Component {
     const target = e.target;
     const isLink = target.hasAttribute('href');
     const isContainer = target.classList && target.classList[0].includes('MenuContainer');
-
+    lucia.buttonClick(target.getAttribute('href'));
     if (isLink || isContainer) {
       this.toggleMenu();
     }
@@ -292,11 +293,23 @@ class Header extends Component {
                     navLinks.map(({ url, name }, i) => (
                       <CSSTransition key={i} classNames="fadedown" timeout={3000}>
                         <NavListItem key={i} style={{ transitionDelay: `${i * 100}ms` }}>
-                          <NavLink href={url}>{name}</NavLink>
+                          <NavLink
+                            href={url}
+                            onClick={() => {
+                              lucia.buttonClick(url);
+                            }}>
+                            {name}{' '}
+                          </NavLink>
                         </NavListItem>
                       </CSSTransition>
                     ))}
-                  <ResumeLink href={'/BlogsPage'}>Blogs</ResumeLink>
+                  <ResumeLink
+                    href={'/BlogsPage'}
+                    onClick={() => {
+                      lucia.buttonClick('blogsPage');
+                    }}>
+                    Blogs
+                  </ResumeLink>
                 </TransitionGroup>
               </NavList>
             )}

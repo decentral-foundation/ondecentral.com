@@ -54,6 +54,7 @@
     "gatsby-transformer-sharp": "^2.1.13",
     "http-server": "^14.1.0",
     "js-cookie": "^3.0.5",
+    "luciasdk-t1": "^1.0.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.2",
     "react-anchor-link-smooth-scroll": "^1.0.11",

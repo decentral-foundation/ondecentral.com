@@ -6,6 +6,7 @@ import { srConfig } from '../config';
 import styled from 'styled-components';
 import { theme, mixins, media, Section, Heading } from '../styles';
 const { colors_option_b, fontSizes, fonts } = theme;
+import lucia from '../utils/lucia';
 
 const AboutContainer = styled(Section)`
   position: relative;
@@ -152,7 +153,13 @@ class About extends Component {
           </div>
         </FlexContainer>
         <div style={{ transitionDelay: '2500ms' }}>
-          <EmailLink href={`/MarketingUserForm`}>Access the One-Pager</EmailLink>
+          <EmailLink
+            onClick={() => {
+              lucia.buttonClick('About - Access the one paper');
+            }}
+            href={`/MarketingUserForm`}>
+            Access the One-Pager
+          </EmailLink>
         </div>
       </AboutContainer>
     );

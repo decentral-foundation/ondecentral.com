@@ -5,6 +5,7 @@ import { IconGithub, IconLinkedin, IconInstagram, IconTwitter } from './icons';
 import styled from 'styled-components';
 import { theme, media } from '../styles';
 const { colors_option_b } = theme;
+import lucia from '../utils/lucia';
 
 const SocialContainer = styled.div`
   width: 40px;
@@ -66,7 +67,10 @@ class Social extends Component {
                         href={url}
                         target="_blank"
                         rel="nofollow noopener noreferrer"
-                        aria-label={name}>
+                        aria-label={name}
+                        onClick={() => {
+                          lucia.buttonClick(name);
+                        }}>
                         {name === 'Github' ? (
                           <IconGithub />
                         ) : name === 'Linkedin' ? (

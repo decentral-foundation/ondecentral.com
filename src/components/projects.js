@@ -6,6 +6,7 @@ import { IconGithub, IconExternal, IconFolder } from './icons';
 import styled from 'styled-components';
 import { theme, mixins, ModalStyle, media, Section, Button } from '../styles';
 const { colors_option_b, fontSizes, fonts } = theme;
+import lucia from '../utils/lucia';
 
 const ProjectsContainer = styled(Section)`
   ${mixins.flexCenter};
@@ -210,7 +211,7 @@ class Projects extends Component {
     } else if (hash === '#rspa-feature') {
       postIndex = 0; //find index
     } else if (hash === '#publications') {
-      window.scroll(50,5800); 
+      window.scroll(50, 5800);
     }
 
     // if not found can either do nothing or set the location hash back to empty string
@@ -225,7 +226,10 @@ class Projects extends Component {
     });
   }
 
-  showMoreToggle = () => this.setState({ showMore: !this.state.showMore });
+  showMoreToggle = () => {
+    this.setState({ showMore: !this.state.showMore });
+    lucia.buttonClick('project - show more/less');
+  };
   showModal = index => {
     this.setState({ showModal: !this.state.showModal, ele: index });
   };
@@ -238,7 +242,6 @@ class Projects extends Component {
     const GRID_LIMIT = 6;
     const { showMore } = this.state;
     const { data } = this.props;
-
     const projects = data.filter(({ node }) => node.frontmatter.show === 'true');
     const firstSix = projects.slice(0, GRID_LIMIT);
     const projectsToShow = showMore ? projects : firstSix;
@@ -338,11 +341,15 @@ class Projects extends Component {
                                         `#${postsToShow[i].node.frontmatter.endpoint}`,
                                       );
                                       this.showModal(i);
+                                      lucia.buttonClick(postsToShow[i].node.frontmatter.title);
                                     }
                                   }}>
                                   <IconFolder />
                                 </Folder>
-                                <Links>
+                                <Links
+                                  onClick={() => {
+                                    lucia.buttonClick(`link-${github}`);
+                                  }}>
                                   {github && (
                                     <IconLink
                                       href={github}
@@ -363,7 +370,10 @@ class Projects extends Component {
                                   )}
                                 </Links>
                               </ProjectHeader>
-                              <ProjectName>
+                              <ProjectName
+                                onClick={() => {
+                                  lucia.buttonClick(`link-${external}`);
+                                }}>
                                 {external ? (
                                   <a
                                     href={external}
@@ -383,6 +393,7 @@ class Projects extends Component {
                                     const { origin } = url;
                                     window.history.pushState({}, '', origin);
                                     this.showModal(i);
+                                    lucia.buttonClick(title);
                                   }
                                 }}
                                 dangerouslySetInnerHTML={{ __html: html }}
