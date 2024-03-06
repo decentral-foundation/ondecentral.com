@@ -6,6 +6,7 @@ import UserForm from '../components/userform';
 import styled from 'styled-components';
 import Layout from '../components/layout';
 import { mixins, Main } from '../styles';
+import lucia from '../utils/lucia';
 const MainContainer = styled(Main)`
   ${mixins.sidePadding};
   counter-reset: section;
@@ -13,6 +14,7 @@ const MainContainer = styled(Main)`
 `;
 
 const MarketingUserForm = ({ data, location }) => {
+  lucia.pageView('Marketing User Form');
   return (
     <Layout location={location}>
       <MainContainer id="resources">
