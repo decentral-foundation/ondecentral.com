@@ -68,7 +68,8 @@ class UserForm extends Component {
       .then(response => response.json())
       .then(alert(`Thank you for contacting us, you will receive an email soon`))
       .catch(error => console.error(error));
-    lucia.trackConversion(JSON.stringify(info));
+    lucia.trackConversion('info', 0, info);
+    lucia.userInfo(info.email, info);
     lucia.buttonClick('Access our one-paper');
   }
 

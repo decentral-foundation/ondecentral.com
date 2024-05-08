@@ -1,4 +1,8 @@
 const config = require('./src/config');
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
 module.exports = {
   siteMetadata: {
     title: config.siteTitle,
@@ -14,6 +18,7 @@ module.exports = {
           head: true,
           respectDNT: true,
         },
+        apiKey: process.env.API_KEY,
       },
     },
     `gatsby-plugin-react-helmet`,
