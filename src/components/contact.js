@@ -203,7 +203,7 @@ class Contact extends Component {
                     <a href="https://discord.gg/tcfZ9B7VNH">discord</a>
                   </li>
                   <li>
-                    <a href="https://t.me/+RJ_CvBSlfSRkZGE5">telegram</a>
+                    <a href="https://t.me/+ktxyuIoFAuVhNTMx">telegram</a>
                   </li>
                 </ul>
               </div>
