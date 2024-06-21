@@ -3,6 +3,7 @@ import { IconGithub, IconLinkedin, IconInstagram, IconTwitter } from './icons';
 import { socialMedia } from '../config';
 import styled from 'styled-components';
 import { theme, mixins, media } from '../styles';
+import lucia from '../utils/lucia';
 const { colors_option_b, fontSizes, fonts } = theme;
 
 const FooterContainer = styled.footer`
@@ -52,7 +53,10 @@ const Footer = () => (
                 href={url}
                 target="_blank"
                 rel="nofollow noopener noreferrer"
-                aria-label={name}>
+                aria-label={name}
+                onClick={() => {
+                  lucia.buttonClick(`footer-${name}`);
+                }}>
                 {name === 'Github' ? (
                   <IconGithub />
                 ) : name === 'Linkedin' ? (

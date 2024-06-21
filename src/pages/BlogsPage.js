@@ -5,6 +5,7 @@ import Layout from '../components/layout';
 import Featured from '../components/featured';
 import styled from 'styled-components';
 import { mixins, Main } from '../styles';
+import lucia from '../utils/lucia';
 
 const MainContainer = styled(Main)`
   ${mixins.sidePadding};
@@ -12,6 +13,7 @@ const MainContainer = styled(Main)`
 `;
 
 const BlogsPage = ({ data, location }) => {
+  lucia.pageView('Blogs');
   const info = {
     title: 'Blogs',
     source: 'Decentral Portal',

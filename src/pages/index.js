@@ -10,6 +10,7 @@ import Team from '../components/team';
 import Contact from '../components/contact';
 import styled from 'styled-components';
 import { mixins, Main } from '../styles';
+import lucia from '../utils/lucia';
 
 const MainContainer = styled(Main)`
   ${mixins.sidePadding};
@@ -30,6 +31,7 @@ const IndexPage = ({ data, location }) => {
   //   //console.log(err);
   // }
 
+  lucia.pageView('home');
   return (
     <Layout location={location}>
       <MainContainer id="content">

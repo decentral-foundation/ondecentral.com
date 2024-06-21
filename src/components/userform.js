@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { theme, mixins, media } from '../styles';
 const { fontSizes } = theme;
+import lucia from '../utils/lucia';
 // import React, { useRef } from 'react';
 
 const UserFormContainer = styled.main`
@@ -67,6 +68,9 @@ class UserForm extends Component {
       .then(response => response.json())
       .then(alert(`Thank you for contacting us, you will receive an email soon`))
       .catch(error => console.error(error));
+    lucia.trackConversion('info', 0, info);
+    lucia.userInfo(info.email, info);
+    lucia.buttonClick('Access our one-paper');
   }
 
   render() {

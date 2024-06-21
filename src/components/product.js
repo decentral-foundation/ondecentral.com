@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { theme, mixins, media, Section, Heading } from '../styles';
 import { srConfig } from '../config';
 const { colors_option_b, fontSizes, fonts } = theme;
+import lucia from '../utils/lucia';
 
 const ProductContainer = styled(Section)`
   position: relative;
@@ -226,7 +227,10 @@ class Product extends Component {
                   <Tab
                     key={i}
                     isActive={this.isActive(i)}
-                    onClick={e => this.setActiveTab(i, e)}
+                    onClick={e => {
+                      this.setActiveTab(i, e);
+                      lucia.buttonClick(`Additional questions: ${url}`);
+                    }}
                     role="tab"
                     aria-selected={this.isActive(i) ? 'true' : 'false'}
                     aria-controls={`tab${i}`}
